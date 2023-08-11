@@ -15,6 +15,7 @@ const timeCounter = setInterval(function() {
 
     const daysToEvent = Math.floor(difEventTime / dayInMs);
     const hoursToEvent = Math.floor((difEventTime % dayInMs / hourInMS));
+    const minToEvent = Math.floor((difEventTime % hourInMS / minInMS));
     const secToEvent = Math.floor((difEventTime % minInMS) / 1000);
 
     document.getElementById('counter').innerHTML = `${daysToEvent}d ${hoursToEvent}h ${minToEvent}m ${secToEvent}s`;
